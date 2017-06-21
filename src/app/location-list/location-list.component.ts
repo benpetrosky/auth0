@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationObj } from '../location.model';
-import { FoursquareService } from '../foursquare.service'
+import { FoursquareService } from '../foursquare.service';
 import { Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
-
 
 @Component({
   selector: 'app-location-list',
@@ -22,8 +21,6 @@ export class LocationListComponent implements OnInit {
 
   callApi(city, query) {
     this.foursquareService.getVenue(city, query).subscribe(data => {this.results = data.response.groups[0].items;
-
-
     })
   }
 
@@ -46,5 +43,10 @@ export class LocationListComponent implements OnInit {
     this.locations = this.foursquareService.getLocations();
   }
 
+  beginDeletingLocation(locationToDelete){
+    if(confirm("Are you sure you want to delete from database?")){
+      this.foursquareService.deleteLocation(locationToDelete);
+    }
+  }
 
 }

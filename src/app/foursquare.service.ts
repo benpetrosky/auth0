@@ -34,5 +34,9 @@ export class FoursquareService {
   addLocation(newLocation: LocationObj) {
     this.locations.push(newLocation);
   }
+  deleteLocation(locationToDelete){
+    var locationEntryInFirebase = this.getLocationById(locationToDelete.$key);
+    locationEntryInFirebase.remove();
+  }
 
 }

@@ -26,7 +26,7 @@
     <input #newCityQuery>
     <label for="city">Choose a category to search:</label>
     <input #newCatQuery>
-    <button class="btn btn-info" (click)="onClick(newCityQuery.value, newCatQuery.value); newCityQuery.value=''; newCatQuery.value='';">Search</button>
+    <button id="btn" class="btn btn-info" (click)="onClick(newCityQuery.value, newCatQuery.value); newCityQuery.value=''; newCatQuery.value='';">Search</button>
   </div>
   </div>
   </div>
@@ -39,7 +39,7 @@
       <ul>
         <li *ngFor="let location of locations| async" (click)="goToDetailPage(location)">{{location.name}} <br>
           {{location.$key}}
-
+          <button (click)="beginDeletingLocation(location)">Delete</button>
         </li>
       </ul>
     </div>

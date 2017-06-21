@@ -6,3 +6,27 @@
   font-size: 15px;
 
 }
+
+
+#btn{
+  display: inline-block;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #800000;
+    background-color: #1a0000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+#btn :hover {background-color: #660000}
+
+  #btn:active {
+    background-color: #ffb3b3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
