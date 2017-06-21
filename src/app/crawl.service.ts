@@ -8,6 +8,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class CrawlService {
   crawls: FirebaseListObservable<any[]>;
   myCrawls: FirebaseListObservable<any[]>;
+  myCrawlsObjs;
 
   constructor(private database: AngularFireDatabase) {
   this.crawls = database.list('crawls');
@@ -28,9 +29,41 @@ export class CrawlService {
  getCrawlById(crawlId: string){
    return this.database.object('crawls/' + crawlId)
  }
+ getMyCrawlById(myCrawlId: string){
+   return this.database.object(myCrawlId)
+ }
 
  addMyCrawl(newMyCrawl: MyCrawl){
    this.myCrawls.push(newMyCrawl);
+ }
+
+ updateCrawl(localUpdatedCrawl){
+   var crawlEntryInFirebase = this.getCrawlById(localUpdatedCrawl.$key);
+   crawlEntryInFirebase.update({title: localUpdatedCrawl.title,
+                                startingTime: localUpdatedCrawl.startingTime});
+ }
+
+  deleteCrawl(localCrawlToDelete){
+    var crawlEntryInFirebase = this.getCrawlById(localCrawlToDelete.$key);
+    // var crawlyObs = this.getMyCrawls();
+    // console.log(crawlyObs);
+    // console.log(typeof crawlyObs);
+    // for (let i = 0; i < crawlyObs.length; i++) {
+    //     var test = crawlyObs[i].title;
+    //     console.log(test);
+    // }
+      // crawlName = crawlEntryInFirebase.title;
+      //  allMyCrawls = this.myCrawls
+      //  If myCrawl.title === crawlName;
+      // myCrawlName = myCrawlEntryInFirebase.title;
+
+  //  if (crawlEntryInFirebase.$key === myCrawlEntryInFirebase.crawlKey) {
+  //    console.log("here")
+  //  }
+  //   myCrawlEntryInFirebase.remove();
+
+  crawlEntryInFirebase.remove();
+
  }
 
 }

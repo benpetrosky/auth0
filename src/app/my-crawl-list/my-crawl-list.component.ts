@@ -22,7 +22,7 @@ export class MyCrawlListComponent implements OnInit {
   ngOnInit() {
     this.myCrawls = this.crawlService.getMyCrawls();
     this.crawls = this.crawlService.getCrawls();
-    console.log(this.myCrawls)
+    console.log(this.crawls)
 
     if (this.auth.userProfile) {
    this.profile = this.auth.userProfile;

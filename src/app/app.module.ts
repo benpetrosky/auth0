@@ -20,10 +20,10 @@ import { NewCrawlComponent } from './new-crawl/new-crawl.component';
 import { CrawlDetailComponent } from './crawl-detail/crawl-detail.component';
 
 import { MyCrawlListComponent } from './my-crawl-list/my-crawl-list.component';
-import { LocationComponent } from './location/location.component';
 import { LocationListComponent } from './location-list/location-list.component';
 import  {FoursquareService} from "./foursquare.service";
 import { LocationDetailComponent } from './location-detail/location-detail.component';
+import { EditCrawlComponent } from './edit-crawl/edit-crawl.component';
 
 
 export const firebaseConfig = {
@@ -43,9 +43,9 @@ export const firebaseConfig = {
     NewCrawlComponent,
     CrawlDetailComponent,
     MyCrawlListComponent,
-    LocationComponent,
     LocationListComponent,
-    LocationDetailComponent
+    LocationDetailComponent,
+    EditCrawlComponent
   ],
   imports: [
     BrowserModule,
