@@ -1,5 +1,41 @@
 
 
-  <h3><em>{{(locationToDisplay | async)?.name}}</em></h3>
+<h3><em>{{(locationToDisplay | async)?.name}}</em></h3>
+<input type="hidden" #newBusinessId value="{{(locationToDisplay | async)?.id}}">
+<button class="btn btn-default" (click)="detailInfo(newBusinessId.value)">View Details</button>
+<div *ngIf="outputs" class="well">
+  <div *ngIf="(outputs)?.menu" class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Location Menu Link</h4>
+    </div>
+    <div class="panel-body">
+      <h4><a href="{{(outputs.menu)?.url}}">Click Here To Go To Menu!</a></h4>
+    </div>
+  </div>
 
-<!-- <button class="btn btn-default" (click)="detailInfo()">View</button> -->
+
+  <div *ngIf="(outputs.hours)?.timeframes[0]">
+    <h4>Days</h4>
+    <h4>{{(outputs.hours.timeframes[0])?.days}}</h4>
+    <h4>Hours of Operation</h4>
+    <h5>{{(outputs.hours.timeframes[0].open[0])?.renderedTime}}</h5>
+    <h5>{{(outputs.hours.timeframes[0].open[1])?.renderedTime}}</h5>
+  </div>
+
+  <div *ngIf="(outputs.hours)?.timeframes[1]">
+    <h4 >Days</h4>
+    <h4>{{(outputs.hours.timeframes[1])?.days}}</h4>
+    <h4 >Hours of Operation</h4>
+    <h5>{{(outputs.hours.timeframes[1])?.open[0].renderedTime}}</h5>
+    <h5>{{(outputs.hours.timeframes[1])?.open[1].renderedTime}}</h5>
+  </div>
+
+  <div *ngIf="(outputs.hours)?.timeframes[2]">
+    <h4 >Days</h4>
+    <h4>{{(outputs.hours.timeframes[2])?.days}}</h4>
+    <h4 >Hours of Operation</h4>
+    <h5>{{(outputs.hours.timeframes[2].open[0])?.renderedTime}}</h5>
+    <h5>{{(outputs.hours.timeframes[2].open[1])?.renderedTime}}</h5>
+  </div>
+
+</div>

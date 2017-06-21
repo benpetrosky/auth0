@@ -17,6 +17,12 @@ export class FoursquareService {
      return test;
   }
 
+  getDetailOfBar(id){
+    var test = this.http.get('https://api.foursquare.com/v2/venues/'+ id + '?client_id=3CV2D24YSOPSEND5MYPPVQYZD2GU42JA41TZ5RQXIBDGTGZ3&client_secret=GEJBW1ZZUIYJNA2SZKAFX45DDXCWIUUY4UQB1T3WEUO5J2XD&v=20150815').map(res => res.json());
+
+     return test;
+  }
+
   getLocations() {
     return this.locations;
   }
@@ -27,6 +33,10 @@ export class FoursquareService {
 
   addLocation(newLocation: LocationObj) {
     this.locations.push(newLocation);
+  }
+  deleteLocation(locationToDelete){
+    var locationEntryInFirebase = this.getLocationById(locationToDelete.$key);
+    locationEntryInFirebase.remove();
   }
 
 }
