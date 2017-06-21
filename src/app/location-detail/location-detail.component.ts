@@ -19,17 +19,17 @@ export class LocationDetailComponent implements OnInit {
   outputs;
 
   detailInfo(id){
-    this.foursquareService.getDetailOfBar(id).subscribe(data => {this.outputs = data.response;
-  })
-}
+    this.foursquareService.getDetailOfBar(id).subscribe(data => {this.outputs = data.response.venue;
+      console.log(this.outputs);
+    })
+  }
   constructor(private route: ActivatedRoute, private location: Location, private foursquareService: FoursquareService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
      this.locationId = urlParameters['id'];
-   });
-   this.locationToDisplay = this.foursquareService.getLocationById(this.locationId);
-   console.log(this.locationId)
+    });
+    this.locationToDisplay = this.foursquareService.getLocationById(this.locationId);
   }
 
 }

@@ -22,7 +22,7 @@ export class LocationListComponent implements OnInit {
 
   callApi(city, query) {
     this.foursquareService.getVenue(city, query).subscribe(data => {this.results = data.response.groups[0].items;
-    console.log(this.results.length);
+
 
     })
   }
@@ -40,8 +40,7 @@ export class LocationListComponent implements OnInit {
     this.locations = this.foursquareService.getLocations();
   }
 
-  constructor(private router: Router, private foursquareService: FoursquareService) {
-  }
+  constructor(private router: Router, private foursquareService: FoursquareService) {}
 
   ngOnInit() {
     this.locations = this.foursquareService.getLocations();
