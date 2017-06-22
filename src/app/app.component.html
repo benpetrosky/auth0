@@ -4,7 +4,7 @@
     <nav class="navbar navbar-inverse bg-inverse">
     <div id="nav" class="container-fluid">
       <div class="navbar-header">
-        <a id="title"class="navbar-brand" routerLink="">The Designated Drinkers</a>
+        <a id="title"class="navbar-brand" routerLink="">The <br>Designated <br>Drinkers</a>
       </div>
 
       <ul  id="test" class="nav navbar-nav navbar-right">
@@ -12,7 +12,6 @@
         <li><a routerLink="/profile" *ngIf="auth.isAuthenticated()">Profile</a></li>
         <li><a routerLink="/crawl-list" *ngIf="auth.isAuthenticated()">View All Crawls</a></li>
         <li><a routerLink="/new-crawl" *ngIf="auth.isAuthenticated()">Add a New Bar Crawl</a></li>
-        <li><a routerLink="/location-list" *ngIf="auth.isAuthenticated()">Find Places to Crawl</a></li>
         <li><a (click)="auth.logout()" *ngIf="auth.isAuthenticated()">Logout</a></li>
 
       </ul>
