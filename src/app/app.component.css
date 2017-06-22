@@ -32,10 +32,13 @@
 
 #nav{
   width: auto;
-  height: 300px;
+  height: 175px;
+  display: inline;
 
 }
-
+#test{
+  display: inline;
+}
 li{
 font-family: "Irish Grover";
   display: inline;

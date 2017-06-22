@@ -1,7 +1,7 @@
 #panelOne{
   font-size: 20px;
   color: #333;
-  background-image:url("https://cdn.pixabay.com/photo/2016/11/21/17/59/advertisement-1846865_1280.jpg");
+  background-image:url("/assets/img/canvas.jpg");
   border-color:#ccffff;
   margin:150px;
   border-bottom: 1px solid white;
@@ -15,7 +15,7 @@
   border-color: #ddd;
   margin: 20px;
   width:500px;
-  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/18/14/advertisement-1846965_1280.jpg");
+  background-image: url("/assets/img/canvas.jpg");
   background-size: contain;
 }
 
