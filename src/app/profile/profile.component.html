@@ -1,4 +1,4 @@
-<h1>{{profile?.given_name}} is logged in.</h1>
+<h1 id="login">{{profile?.given_name}} is logged in.</h1>
 
 
 <div class="panel panel-default profile-area">
@@ -11,7 +11,6 @@
       <label><i class="glyphicon glyphicon-user"></i> Nickname</label>
       <h3 class="nickname">{{ profile?.nickname }}</h3>
     </div>
-    <pre class="full-profile">{{ profile | json }}</pre>
   </div>
 </div>
 
