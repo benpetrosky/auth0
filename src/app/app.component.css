@@ -25,7 +25,7 @@
       max-height: 100%;
   }
 
-  
+
 #nav{
   width: auto;
   height: 200px;
@@ -38,6 +38,7 @@
 li{
 font-family: "Irish Grover";
   display: inline;
+  font-size: 20px;
 
 }
 html, body {

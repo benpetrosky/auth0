@@ -38,7 +38,7 @@
 
   </div>
   <div class="col-md-6">
-    <div class="panel panel-default">
+    <div id="panelFive" class="panel panel-default">
       <div class="panel-heading">
         <h3>Search Results:</h3>
       </div>
@@ -54,7 +54,7 @@
             <input class="form-control" #newURL value="{{result.venue.url}}">
             <br>
             <input class="form-control" #newId value="{{(result.venue)?.id}}">
-
+            <br>
             <button class="btn btn-success" (click)="saveLocation(newName.value, newAddressOne.value, newAddressTwo.value, newURL.value, newId.value)">Save</button>
             <hr>
           </li>
