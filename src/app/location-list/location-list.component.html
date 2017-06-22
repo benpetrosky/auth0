@@ -1,54 +1,54 @@
 <div class="container-fluid">
   <div class="panel panel-default">
-  <div class="panel-body">
-    <ul>
-      <li *ngFor="let result of results">
-        <input class="form-control form-control-success" #newName value="{{(result.venue)?.name }}">
-        <br>
-        <input class="form-control" #newAddressOne value="{{(result.venue.location)?.formattedAddress[0]}}">
-        <br>
-        <input class="form-control" #newAddressTwo value="{{(result.venue.location)?.formattedAddress[1]}}">
-        <br>
-        <input class="form-control" #newURL value="{{result.venue.url}}">
-        <br>
-        <input class="form-control" #newId value="{{(result.venue)?.id}}">
-
-        <button class="btn btn-success" (click)="saveLocation(newName.value, newAddressOne.value, newAddressTwo.value, newURL.value, newId.value)">Save</button>
-
-        <hr>
-      </li>
-    </ul>
-  </div>
-  </div>
-</div>
-
-  <div id="panelOne"class="panel panel-default">
+    <div class="panel-heading">
+      <h3>Search Results:</h3>
+    </div>
     <div class="panel-body">
-
-
-  <div class="form-group bg-muted">
-    <label for="city">Choose a city to search:</label>
-    <input #newCityQuery>
-    <label for="city">Choose a category to search:</label>
-    <input #newCatQuery>
-    <button id="btn" class="btn btn-info" (click)="onClick(newCityQuery.value, newCatQuery.value); newCityQuery.value=''; newCatQuery.value='';">Search</button>
-  </div>
-  </div>
-  </div>
-  
-  <div id="panelTwo" class="panel panel-default">
-    <div class="panel-body">
-      <div class="form-group">
-        <label for="lists">View Locations added</label>
-    <button class="btn btn-default" (click)="viewLocations()">View</button>
-    <div *ngIf="locations">
       <ul>
-        <li *ngFor="let location of locations| async" (click)="goToDetailPage(location)">{{location.name}} <br>
-          {{location.$key}}
-          <button (click)="beginDeletingLocation(location)">Delete</button>
+        <li *ngFor="let result of results">
+          <input class="form-control form-control-success" #newName value="{{(result.venue)?.name }}">
+          <br>
+          <input class="form-control" #newAddressOne value="{{(result.venue.location)?.formattedAddress[0]}}">
+          <br>
+          <input class="form-control" #newAddressTwo value="{{(result.venue.location)?.formattedAddress[1]}}">
+          <br>
+          <input class="form-control" #newURL value="{{result.venue.url}}">
+          <br>
+          <input class="form-control" #newId value="{{(result.venue)?.id}}">
+
+          <button class="btn btn-success" (click)="saveLocation(newName.value, newAddressOne.value, newAddressTwo.value, newURL.value, newId.value)">Save</button>
+          <hr>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
+<div id="panelOne"class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group bg-muted">
+      <label for="city">Choose a city to search:</label>
+      <input #newCityQuery>
+      <label for="city">Choose a category to search:</label>
+      <input #newCatQuery>
+      <button id="btn" class="btn btn-info" (click)="onClick(newCityQuery.value, newCatQuery.value); newCityQuery.value=''; newCatQuery.value='';">Search</button>
+    </div>
   </div>
+</div>
+
+<div id="panelTwo" class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+    <label for="lists">View Locations added</label>
+    <div *ngIf="locations">
+      <ul>
+        <li *ngFor="let location of locations| async" (click)="goToDetailPage(location)">{{location.name}} <br>
+          {{location.formattedAddressOne}}, <br>
+          {{location.formattedAddressTwo}}
+          <button class="btn btn-danger" (click)="beginDeletingLocation(location)">Delete</button>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
