@@ -40,9 +40,11 @@ export class CrawlService {
  updateCrawl(localUpdatedCrawl){
 
    var crawlEntryInFirebase = this.getCrawlById(localUpdatedCrawl.$key);
-   
+
    crawlEntryInFirebase.update({title: localUpdatedCrawl.title,
-                                startingTime: localUpdatedCrawl.startingTime});
+                                startingTime: localUpdatedCrawl.startingTime,
+                                crawlDate: localUpdatedCrawl.crawlDate
+                              });
  }
 
   deleteCrawl(localCrawlToDelete){

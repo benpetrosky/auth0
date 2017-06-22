@@ -1,22 +1,27 @@
 <div class="container">
   <div id="panelFour" class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-heading">
       <h2>{{crawlToDisplay?.title}}</h2>
+      <hr>
+    </div>
+    <div class="panel-body">
+
       <h3>By {{crawlToDisplay?.creator}}</h3>
+      <h4>We are meeting on <em>{{crawlToDisplay?.crawlDate}}</em></h4>
       <h4>We are meeting at {{crawlToDisplay?.startingTime}}</h4>
-      <h4>This is where we are starting our crawl: {{crawlToDisplay?.startingLocation}}</h4>
-      <h4>This is the mid bar for the crawl: {{crawlToDisplay?.midLocation}}</h4>
-      <h4>This is where we hope to finish the pub crawl: {{crawlToDisplay?.endingLocation}}</h4>
+      <h4>This is where we are starting our crawl: <strong>{{crawlToDisplay?.startingLocation}}</strong></h4>
+      <h4>This is the mid bar for the crawl: <strong>{{crawlToDisplay?.midLocation}}</strong></h4>
+      <h4>This is where we hope to finish the pub crawl: <strong>{{crawlToDisplay?.endingLocation}}</strong></h4>
       <button class="btn btn-primary" (click)='joinCrawl()'>Join {{crawlToDisplay?.title}}</button>
 
 
-
+      <h2>These are all of the people coming to the crawl</h2>
       <div *ngFor="let crawl of crawls | async">
         <div  *ngFor="let myCrawl of myCrawls | async">
           <div *ngIf="myCrawl.crawlKey === crawl.$key">
               <div  class="panel panel-default">
                 <div class="panel-body">
-                  <h3>These are all of the people coming to the crawl {{myCrawl.username}}</h3>
+                  <h3>{{myCrawl.username}}</h3>
                 </div>
               </div>
           </div>

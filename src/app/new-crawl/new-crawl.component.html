@@ -10,6 +10,7 @@
             <br>
             <input #newTitle>
           </div>
+          <br>
           <div>
             <label class="titlesTwo">Start Time:</label>
             <br>
@@ -34,6 +35,12 @@
             </select>
           </div>
         </div>
+        <br>
+        <div class="form-group">
+          <label class="titles">Crawl Date:</label>
+          <br>
+          <input type="date" #newDate>
+        </div>
         <div class="col-xs-4" *ngIf="locations" class="form-group">
           <label>Starting Location:</label>
           <select class="form-control" (change)="onChangeAddressOne($event.target.value)">
@@ -54,7 +61,7 @@
             <option *ngFor="let location of locations | async" value="{{location.name}}, {{location.formattedAddressOne}}"> {{location.name}}</option>
           </select>
         </div>
-         <button (click)="submitForm(newTitle.value, newStartingTime.value); newTitle.value='';">Add</button>
+         <button (click)="submitForm(newTitle.value, newStartingTime.value, newDate.value); newTitle.value='';">Add</button>
       </div>
       </div>
     </div>

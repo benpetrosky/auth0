@@ -4,6 +4,10 @@
 <input [(ngModel)]="selectedCrawl.title">
 <br>
 
+<div class="form-group">
+  <label>Change Date:</label>
+  <input type="date" [(ngModel)]="selectedCrawl.crawlDate">
+</div>
 <div>
   <label>Start Time:</label>
   <br>
@@ -27,8 +31,8 @@
     <option value="10:00pm">10:00pm</option>
   </select>
 
-  <button (click)="beginUpdatingCrawl(selectedCrawl)">Update</button>
+  <button class="btn btn-info" (click)="beginUpdatingCrawl(selectedCrawl)">Update</button>
 
   <hr>
-  <button (click)="beginDeletingCrawl(selectedCrawl)">Delete</button>
+  <button class="btn btn-danger" (click)="beginDeletingCrawl(selectedCrawl)">Delete</button>
 </div>

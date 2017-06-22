@@ -44,8 +44,8 @@ export class NewCrawlComponent implements OnInit {
     this.addressStringMid = addressOption;
   }
 
-  submitForm(title: string, startingTime: string){
-    var newCrawl: Crawl = new Crawl(this.profile.name, this.profile.sub, title, this.addressStringOne, this.addressStringMid, this.addressStringTwo, startingTime);
+  submitForm(title: string, startingTime: string, crawlDate: string){
+    var newCrawl: Crawl = new Crawl(this.profile.name, this.profile.sub, title, this.addressStringOne, this.addressStringMid, this.addressStringTwo, startingTime, crawlDate);
     this.crawlService.addCrawl(newCrawl);
 
   }
