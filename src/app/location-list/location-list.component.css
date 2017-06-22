@@ -6,8 +6,9 @@
   border: 6px black;
   border-color:#ccffff;
   /*margin:150px;*/
-  border-bottom: 1px solid white;
-  border-radius: 1px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 2px solid white;
+  box-shadow: 2px 2px 4px 4px #ccf3ff;
 }
 
 .floatResults {
@@ -24,8 +25,13 @@
   width:500px;
   background-color: #8db1c1;
   background-image: linear-gradient(#b0ddf2, white);
-  border: 6px black;
+  border: 50px solid black;
   background-size: contain;
+  border-color:black;
+  /*margin:150px;*/
+  border-bottom: 2px solid white;
+  border-radius: 2px solid white;
+  box-shadow: 2px 2px 4px 4px #ccf3ff;
 }
 
 .form-control{

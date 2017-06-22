@@ -1,11 +1,11 @@
 
 
-<div class="row well">
-  
+<div id="final" class="row well">
+
     <div class="container-fluid">
       <div class="panel panel-default">
         <div class="panel-body">
-        <h3><em>{{(locationToDisplay | async)?.name}}</em></h3>
+        <h3 ><em>{{(locationToDisplay | async)?.name}}</em></h3>
         <input type="hidden" #newBusinessId value="{{(locationToDisplay | async)?.id}}">
         <button class="btn btn-default" (click)="detailInfo(newBusinessId.value)">View Details</button>
         <div *ngIf="outputs" class="well">

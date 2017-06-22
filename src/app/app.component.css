@@ -10,7 +10,7 @@
   	margin-right:500px;
   	text-align: center;
   	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 5px 5px 0px rgba(0,0,0,0.8);
-  	color: #FFFFFF;
+  	color: #33ccff;
   	opacity: 0.5;
   	font: 700 50px 'Bitter';
     font-family: "Irish Grover";
@@ -39,7 +39,6 @@ li{
 font-family: "Irish Grover";
   display: inline;
   font-size: 20px;
-
 }
 html, body {
   width: 100%;

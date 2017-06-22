@@ -1,0 +1,9 @@
+#panelSix{
+  background-color: #8db1c1;
+  background-image: linear-gradient(#b0ddf2, white);
+  border-color:#ccffff;
+  /*margin:150px;*/
+  border-bottom: 2px solid white;
+  border-radius: 2px solid white;
+  box-shadow: 2px 2px 4px 4px #8db1c1;
+}
