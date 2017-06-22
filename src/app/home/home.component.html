@@ -1,3 +1,9 @@
-<h1>Welcome</h1>
-<div class="alert alert-success" *ngIf="auth.isAuthenticated()">{{ profile?.name }} you are logged in</div>
-<div class="alert alert-danger" *ngIf="!auth.isAuthenticated()">You are not logged in</div>
+<div class="container">
+  <div id="panelSix" class="panel panel-default">
+    <div class="panel-body">
+      <h1>Welcome</h1>
+      <div class="alert alert-info" *ngIf="auth.isAuthenticated()">{{ profile?.name }} you are logged in</div>
+      <div class="alert alert-danger" *ngIf="!auth.isAuthenticated()">You are not logged in</div>
+    </div>
+  </div>
+</div>

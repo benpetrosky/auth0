@@ -4,11 +4,11 @@
       <div id="panelOne"class="panel panel-default">
         <div class="panel-body">
           <div class="form-group bg-muted">
-            <label for="city">Choose a city to search:</label>
+            <label for="city" class="titlesTwo">Search a city:</label>
             <input #newCityQuery>
           </div>
           <div class="form-group">
-            <label for="city">Choose a category to search:</label>
+            <label for="city" class="titles">Search a Venue:</label>
             <input #newCatQuery>
           </div>
           <button id="btn" class="btn btn-info" (click)="onClick(newCityQuery.value, newCatQuery.value); newCityQuery.value=''; newCatQuery.value='';">Search</button>
@@ -21,7 +21,7 @@
       <div id="panelTwo" class="panel panel-default">
         <div class="panel-body">
           <div class="form-group">
-            <label for="lists">View Locations added</label>
+            <label for="lists" class="titles">View Locations added</label>
             <div *ngIf="locations">
               <ul>
                 <li *ngFor="let location of locations| async" (click)="goToDetailPage(location)">{{location.name}} <br>
@@ -40,7 +40,7 @@
   <div class="col-md-6">
     <div id="panelFive" class="panel panel-default">
       <div class="panel-heading">
-        <h3>Search Results:</h3>
+        <h3 class= "titles">Search Results:</h3>
       </div>
       <div class="panel-body">
         <ul>
