@@ -1,18 +1,17 @@
 <div class="container">
-  <div>
-    <h2>{{crawlToDisplay?.title}}</h2>
-    <h3>By {{crawlToDisplay?.creator}}</h3>
-    <h4>We are meeting at {{crawlToDisplay?.startingTime}}</h4>
-    <h4>This is where we are starting our crawl: {{crawlToDisplay?.startingLocation}}</h4>
-    <h4>This is the mid bar for the crawl: {{crawlToDisplay?.midLocation}}</h4>
-    <h4>This is where we hope to finish the pub crawl: {{crawlToDisplay?.endingLocation}}</h4>
-    <h1>{{crawlToDisplay?.authId}}</h1>
-  </div>
-  <button class="btn btn-primary" (click)='joinCrawl()'>Join {{crawlToDisplay?.title}}</button>
-
+  <div id="panelFour" class="panel panel-default">
     <div class="panel-body">
-      <div *ngIf="crawlToDisplay.authId === this.profile.sub">
-        <app-edit-crawl [selectedCrawl]="crawlToDisplay"></app-edit-crawl>
+      <h2>{{crawlToDisplay?.title}}</h2>
+      <h3>By {{crawlToDisplay?.creator}}</h3>
+      <h4>We are meeting at {{crawlToDisplay?.startingTime}}</h4>
+      <h4>This is where we are starting our crawl: {{crawlToDisplay?.startingLocation}}</h4>
+      <h4>This is the mid bar for the crawl: {{crawlToDisplay?.midLocation}}</h4>
+      <h4>This is where we hope to finish the pub crawl: {{crawlToDisplay?.endingLocation}}</h4>
+      <button class="btn btn-primary" (click)='joinCrawl()'>Join {{crawlToDisplay?.title}}</button>
+
+        <div *ngIf="crawlToDisplay.authId === this.profile.sub">
+          <app-edit-crawl [selectedCrawl]="crawlToDisplay"></app-edit-crawl>
+        </div>
+      </div>
       </div>
     </div>
-</div>

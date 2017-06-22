@@ -3,3 +3,8 @@
   background-image: linear-gradient(#b0ddf2, white);
   border: 6px black;
 }
+
+.right-box {
+  float: right;
+  display: inline;
+}

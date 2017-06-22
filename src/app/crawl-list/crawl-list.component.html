@@ -1,10 +1,14 @@
-
-<div id="crawl" class="container-fluid">
-  <h2>List of all Pub Crawls</h2>
-
-  <div *ngFor="let crawl of crawls | async" class="panel panel-default">
+<div class="container-fluid">
+  <div id="panelThree" class="panel panel-default">
     <div class="panel-body">
-      <h3 (click)="goToDetailPage(crawl)"><em>{{crawl.title}}</em> by {{crawl.creator}}</h3>
+      <div id="crawl" class="container-fluid">
+        <h2>List of all Pub Crawls</h2>
+        <div *ngFor="let crawl of crawls | async" class="panel panel-default">
+          <div class="panel-body">
+            <h3 (click)="goToDetailPage(crawl)"><em>{{crawl.title}}</em> by {{crawl.creator}}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
