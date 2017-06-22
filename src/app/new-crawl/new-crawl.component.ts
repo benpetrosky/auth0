@@ -16,6 +16,7 @@ export class NewCrawlComponent implements OnInit {
   profile: any;
   addressStringOne: string;
   addressStringTwo: string;
+  addressStringMid: string;
 
   constructor(private crawlService: CrawlService, private auth: AuthService, private foursquareService: FoursquareService) { }
 
@@ -39,8 +40,12 @@ export class NewCrawlComponent implements OnInit {
     this.addressStringTwo = addressOption;
   }
 
+  onChangeAddressMid(addressOption) {
+    this.addressStringMid = addressOption;
+  }
+
   submitForm(title: string, startingTime: string){
-    var newCrawl: Crawl = new Crawl(this.profile.name, this.profile.sub, title, this.addressStringOne, this.addressStringTwo, startingTime);
+    var newCrawl: Crawl = new Crawl(this.profile.name, this.profile.sub, title, this.addressStringOne, this.addressStringMid, this.addressStringTwo, startingTime);
     this.crawlService.addCrawl(newCrawl);
 
   }
