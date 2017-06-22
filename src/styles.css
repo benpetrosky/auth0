@@ -1,10 +1,12 @@
-body{
+#body{
   background-image: url("http://image1.masterfile.com/getImage/NjQxLTA3NjM2MzUyZW4uMDAwMDAwMDA=ANu4uX/641-07636352en_Masterfile.jpg");
   background-repeat: repeat-x;
   background-size: auto;
-  
+  padding:10px;
+  background-color: #2d2d2d;
 
 }
+
 body #a0-lock {
   background-color: black;
 }

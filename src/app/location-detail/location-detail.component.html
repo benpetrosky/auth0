@@ -1,5 +1,5 @@
 
-
+<div class="panel panel-default">
 <h3><em>{{(locationToDisplay | async)?.name}}</em></h3>
 <input type="hidden" #newBusinessId value="{{(locationToDisplay | async)?.id}}">
 <button class="btn btn-default" (click)="detailInfo(newBusinessId.value)">View Details</button>
@@ -38,4 +38,5 @@
     <h5>{{(outputs.hours.timeframes[2].open[1])?.renderedTime}}</h5>
   </div>
 
+</div>
 </div>

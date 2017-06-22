@@ -1,27 +1,32 @@
-<div class="panel-body">
-  <ul>
-    <li *ngFor="let result of results">
-      <input class="form-control" #newName value="{{(result.venue)?.name }}">
-      <br>
-      <input class="form-control" #newAddressOne value="{{(result.venue.location)?.formattedAddress[0]}}">
-      <br>
-      <input class="form-control" #newAddressTwo value="{{(result.venue.location)?.formattedAddress[1]}}">
-      <br>
-      <input class="form-control" #newURL value="{{result.venue.url}}">
-      <br>
-      <input class="form-control" #newId value="{{(result.venue)?.id}}">
+<div class="container-fluid">
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <ul>
+      <li *ngFor="let result of results">
+        <input class="form-control form-control-success" #newName value="{{(result.venue)?.name }}">
+        <br>
+        <input class="form-control" #newAddressOne value="{{(result.venue.location)?.formattedAddress[0]}}">
+        <br>
+        <input class="form-control" #newAddressTwo value="{{(result.venue.location)?.formattedAddress[1]}}">
+        <br>
+        <input class="form-control" #newURL value="{{result.venue.url}}">
+        <br>
+        <input class="form-control" #newId value="{{(result.venue)?.id}}">
 
-      <button class="btn btn-success" (click)="saveLocation(newName.value, newAddressOne.value, newAddressTwo.value, newURL.value, newId.value)">Save</button>
+        <button class="btn btn-success" (click)="saveLocation(newName.value, newAddressOne.value, newAddressTwo.value, newURL.value, newId.value)">Save</button>
 
-      <hr>
-    </li>
-  </ul>
+        <hr>
+      </li>
+    </ul>
+  </div>
+  </div>
 </div>
+
   <div id="panelOne"class="panel panel-default">
     <div class="panel-body">
 
 
-  <div class="form-group">
+  <div class="form-group bg-muted">
     <label for="city">Choose a city to search:</label>
     <input #newCityQuery>
     <label for="city">Choose a category to search:</label>
@@ -30,6 +35,7 @@
   </div>
   </div>
   </div>
+  
   <div id="panelTwo" class="panel panel-default">
     <div class="panel-body">
       <div class="form-group">

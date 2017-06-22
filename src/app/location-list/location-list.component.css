@@ -1,26 +1,41 @@
 #panelOne{
-  background-color: black;
+  font-size: 20px;
+  color: #333;
+  background-image:url("https://cdn.pixabay.com/photo/2016/11/21/17/59/advertisement-1846865_1280.jpg");
+  border-color:#ccffff;
+  margin:150px;
+  border-bottom: 1px solid white;
+  border-radius: 1px solid white;
 }
 
 #panelTwo{
   font-size: 15px;
+  color: white;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  margin: 20px;
+  width:500px;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/18/14/advertisement-1846965_1280.jpg");
+  background-size: contain;
+}
+
+.form-control{
 
 }
 
-
 #btn{
   display: inline-block;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #800000;
+    color: white;
     background-color: #1a0000;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 5px #999;
   }
 
 #btn :hover {background-color: #660000}
