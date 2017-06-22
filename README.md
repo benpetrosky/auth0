@@ -1,8 +1,8 @@
-# Pub-Crawl by Elan Baharie, Jesse Hoare Evans, Ben Petrosky, and Peter Karellas
+# Pub-Crawl by Elan Baharie, Jesse Hoare Evans, Peter Karellas, and Ben Petrosky
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-This project utilizes a Firebase and Auth0.  The Auth0 account will expire by August of 2017. This project utilizes the FourSquare API key to return information about establishnents in any desired location.
+This project utilizes a Firebase and Auth0.  The Auth0 account will expire by August of 2017. This project utilizes the FourSquare API key to return information about establishments in any desired location.
 
 
 ## Development server
@@ -53,9 +53,14 @@ You will need the following things properly installed on your computer
  * You can look up establishments in any given area that you want to go to.
  * Once you have added a crawl you can go to the "View All Crawls" page and view the crawl you created.
  * Then you can add your name to the crawl when you click on the crawl
- * On this detail page you can ciew the details of the crawl and also see anyone else that has signed up
+ * On this detail page you can view the details of the crawl and also see anyone else that has signed up
  * If you go to the profile page you can then view every crawl that you have signed up for.
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Licensing
+This software is licensed under MIT licensing.
+
+Copyright (c) 2017 Elan Baharie, Jesse Hoare Evans, Peter Karellas, Benjamin Petrosky
