@@ -3,7 +3,7 @@
     <app-location-list></app-location-list>
   </div>
   <div class="col-md-6">
-  <div class="panel panel-default">
+  <div id="add" class="panel panel-default">
     <div class="panel-body">
       <h3>Add a new Pub Crawl</h3>
       <div>
@@ -12,9 +12,7 @@
           <br>
           <input #newTitle>
         </div>
-
-
-        <div>
+      <div>
           <label>Start Time:</label>
           <br>
           <select #newStartingTime>
@@ -38,10 +36,6 @@
           </select>
         </div>
       </div>
-  </div>
-
-
-
       <div class="col-xs-4" *ngIf="locations" class="form-group">
         <label>Starting Location:</label>
         <select class="form-control" (change)="onChangeAddressOne($event.target.value)">
@@ -64,7 +58,7 @@
       </div>
        <button (click)="submitForm(newTitle.value, newStartingTime.value); newTitle.value='';">Add</button>
     </div>
-
+  </div>
   </div>
 
 </div>
