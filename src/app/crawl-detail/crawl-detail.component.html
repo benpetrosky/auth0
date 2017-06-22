@@ -9,6 +9,22 @@
       <h4>This is where we hope to finish the pub crawl: {{crawlToDisplay?.endingLocation}}</h4>
       <button class="btn btn-primary" (click)='joinCrawl()'>Join {{crawlToDisplay?.title}}</button>
 
+
+
+      <div *ngFor="let crawl of crawls | async">
+        <div  *ngFor="let myCrawl of myCrawls | async">
+          <div *ngIf="myCrawl.crawlKey === crawl.$key">
+              <div  class="panel panel-default">
+                <div class="panel-body">
+                  <h3>These are all of the people coming to the crawl {{myCrawl.username}}</h3>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
         <div *ngIf="crawlToDisplay.authId === this.profile.sub">
           <app-edit-crawl [selectedCrawl]="crawlToDisplay"></app-edit-crawl>
         </div>

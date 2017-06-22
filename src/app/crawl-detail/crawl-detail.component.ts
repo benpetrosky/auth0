@@ -6,6 +6,7 @@ import { CrawlService } from '../crawl.service';
 import {AuthService} from '../auth.service';
 import { Crawl} from '../crawl.model';
 import { MyCrawl} from '../my-crawl.model';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-crawl-detail',
@@ -14,6 +15,8 @@ import { MyCrawl} from '../my-crawl.model';
   providers: [CrawlService, AuthService]
 })
 export class CrawlDetailComponent implements OnInit {
+  myCrawls: FirebaseListObservable<any[]>;
+  crawls: FirebaseListObservable<any[]>;
   crawlId: string;
   crawlToDisplay;
   profile:any;
@@ -22,6 +25,8 @@ export class CrawlDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
+      this.myCrawls = this.crawlService.getMyCrawls();
+      this.crawls = this.crawlService.getCrawls();
       this.crawlId = urlParameters['id'];
 
     });
