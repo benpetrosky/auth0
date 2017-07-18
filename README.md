@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project utilizes a Firebase and Auth0.  The Auth0 account will expire by August of 2017. This project utilizes the FourSquare API key to return information about establishments in any desired location.
 
+## Link to youtube video of this project
+
+https://www.youtube.com/watch?v=xmSf7dWF8LU
 
 ## Development server
 
